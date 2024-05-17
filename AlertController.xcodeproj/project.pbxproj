@@ -10,13 +10,13 @@
 		5D3D15002BEEB03900DC5E90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D14FF2BEEB03900DC5E90 /* AppDelegate.swift */; };
 		5D3D15022BEEB03900DC5E90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15012BEEB03900DC5E90 /* SceneDelegate.swift */; };
 		5D3D15042BEEB03900DC5E90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15032BEEB03900DC5E90 /* ViewController.swift */; };
-		5D3D15072BEEB03900DC5E90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3D15052BEEB03900DC5E90 /* Main.storyboard */; };
 		5D3D150A2BEEB03900DC5E90 /* AlertController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15082BEEB03900DC5E90 /* AlertController.xcdatamodeld */; };
 		5D3D150C2BEEB03C00DC5E90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3D150B2BEEB03C00DC5E90 /* Assets.xcassets */; };
 		5D3D150F2BEEB03C00DC5E90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3D150D2BEEB03C00DC5E90 /* LaunchScreen.storyboard */; };
 		5D3D151A2BEEB03C00DC5E90 /* AlertControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15192BEEB03C00DC5E90 /* AlertControllerTests.swift */; };
 		5D3D15242BEEB03C00DC5E90 /* AlertControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15232BEEB03C00DC5E90 /* AlertControllerUITests.swift */; };
 		5D3D15262BEEB03C00DC5E90 /* AlertControllerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15252BEEB03C00DC5E90 /* AlertControllerUITestsLaunchTests.swift */; };
+		5D7021242BF5D27F0096F8B9 /* Extension WAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7021232BF5D27F0096F8B9 /* Extension WAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 		5D3D14FF2BEEB03900DC5E90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D3D15012BEEB03900DC5E90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5D3D15032BEEB03900DC5E90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5D3D15062BEEB03900DC5E90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D3D15092BEEB03900DC5E90 /* AlertController.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AlertController.xcdatamodel; sourceTree = "<group>"; };
 		5D3D150B2BEEB03C00DC5E90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D3D150E2BEEB03C00DC5E90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		5D3D151F2BEEB03C00DC5E90 /* AlertControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3D15232BEEB03C00DC5E90 /* AlertControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerUITests.swift; sourceTree = "<group>"; };
 		5D3D15252BEEB03C00DC5E90 /* AlertControllerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5D7021232BF5D27F0096F8B9 /* Extension WAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension WAlert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D3494A52BF5CD4600B0A909 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5D7021232BF5D27F0096F8B9 /* Extension WAlert.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5D3D14F32BEEB03900DC5E90 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +109,10 @@
 		5D3D14FE2BEEB03900DC5E90 /* AlertController */ = {
 			isa = PBXGroup;
 			children = (
+				5D3494A52BF5CD4600B0A909 /* Extensions */,
 				5D3D14FF2BEEB03900DC5E90 /* AppDelegate.swift */,
 				5D3D15012BEEB03900DC5E90 /* SceneDelegate.swift */,
 				5D3D15032BEEB03900DC5E90 /* ViewController.swift */,
-				5D3D15052BEEB03900DC5E90 /* Main.storyboard */,
 				5D3D150B2BEEB03C00DC5E90 /* Assets.xcassets */,
 				5D3D150D2BEEB03C00DC5E90 /* LaunchScreen.storyboard */,
 				5D3D15102BEEB03C00DC5E90 /* Info.plist */,
@@ -236,7 +244,6 @@
 			files = (
 				5D3D150F2BEEB03C00DC5E90 /* LaunchScreen.storyboard in Resources */,
 				5D3D150C2BEEB03C00DC5E90 /* Assets.xcassets in Resources */,
-				5D3D15072BEEB03900DC5E90 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D7021242BF5D27F0096F8B9 /* Extension WAlert.swift in Sources */,
 				5D3D150A2BEEB03900DC5E90 /* AlertController.xcdatamodeld in Sources */,
 				5D3D15042BEEB03900DC5E90 /* ViewController.swift in Sources */,
 				5D3D15002BEEB03900DC5E90 /* AppDelegate.swift in Sources */,
@@ -301,14 +309,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5D3D15052BEEB03900DC5E90 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D3D15062BEEB03900DC5E90 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5D3D150D2BEEB03C00DC5E90 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -445,7 +445,6 @@
 				INFOPLIST_FILE = AlertController/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +471,6 @@
 				INFOPLIST_FILE = AlertController/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
