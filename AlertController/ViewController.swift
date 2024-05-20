@@ -12,7 +12,7 @@ protocol WAlertOptionButtonDelegate: AnyObject {
 }
 
 //MARK: - Button UIView second
-class WAlertOptionButton: UIView {
+class WAlertOptionButtons: UIView {
     
     
     init(frame: CGRect, title: String) {
@@ -48,47 +48,6 @@ class WAlertOptionButton: UIView {
         setupButton()
     }
 
-    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        animateToActiveState()
-    }
-
-    public override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        handleTouch(touches, touchEnded: false)
-    }
-
-    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        handleTouch(touches, touchEnded: true)
-    }
-
-    public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        animateToDefaultState()
-    }
-
-    func handleTouch(_ touches: Set<UITouch>, touchEnded: Bool) {
-        if let touchLocationInSuperview: CGPoint = touches.first?.location(in: self.superview) {
-            let touchLocation: CGPoint = self.convert(touchLocationInSuperview, to: self)
-            if frame.contains(touchLocation) {
-                if touchEnded {
-                    animateToDefaultState()
-                    delegates?.didTap(from: self)
-                } else {
-                    animateToActiveState()
-                }
-            } else {
-                animateToDefaultState()
-            }
-        } else {
-            animateToDefaultState()
-        }
-    }
-
-    func animateToActiveState() {
-        isHighlighted = true
-    }
-
-    func animateToDefaultState() {
-        isHighlighted = false
-    }
 
     var isHighlighted: Bool {
         didSet {
@@ -103,7 +62,7 @@ class WAlertOptionButton: UIView {
 }
 
 //MARK: - Button UIView one
-class WAlertOptionButtonCustom: UIView {
+class WAlertOptionButton: UIView {
     init(frame: CGRect, title: String) {
         
         self.isHighlighted = false
@@ -126,7 +85,7 @@ class WAlertOptionButtonCustom: UIView {
         self.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
-    //NARK: - show botton
+    //MARK: - show botton
     func showButton(view: UIView) {
         self.center = view.center
         view.addSubview(self)
@@ -139,47 +98,6 @@ class WAlertOptionButtonCustom: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        animateToActiveState()
-    }
-
-    public override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        handleTouch(touches, touchEnded: false)
-    }
-
-    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        handleTouch(touches, touchEnded: true)
-    }
-
-    public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        animateToDefaultState()
-    }
-
-    func handleTouch(_ touches: Set<UITouch>, touchEnded: Bool) {
-        if let touchLocationInSuperview: CGPoint = touches.first?.location(in: self.superview) {
-            let touchLocation: CGPoint = self.convert(touchLocationInSuperview, to: self)
-            if frame.contains(touchLocation) {
-                if touchEnded {
-                    animateToDefaultState()
-                    delegate?.didTap(from: self)
-                } else {
-                    animateToActiveState()
-                }
-            } else {
-                animateToDefaultState()
-            }
-        } else {
-            animateToDefaultState()
-        }
-    }
-
-    func animateToActiveState() {
-        isHighlighted = true
-    }
-
-    func animateToDefaultState() {
-        isHighlighted = false
-    }
 
     var isHighlighted: Bool {
         didSet {
@@ -196,6 +114,7 @@ class WAlertOptionButtonCustom: UIView {
 
 //MARK: - WAlert View
 class WAlert: UIView {
+    
     //MARK: - настройка вью(синейго квадрата)
     override init(frame: CGRect) {
         super.init(frame: CGRect(x: 0, y: 0, width: 250, height: 200))
@@ -211,7 +130,7 @@ class WAlert: UIView {
 }
     
 //MARK: - ViewController
-class ViewController: UIViewController, WAlertOptionButtonDelegate {
+class WViewController: UIViewController, WAlertOptionButtonDelegate {
     func didTap(from: UIView) {
         print("tap")
     }
@@ -229,7 +148,7 @@ class ViewController: UIViewController, WAlertOptionButtonDelegate {
         view.addSubview(alertOptionButton)
         alertOptionButton.delegate = self
         
-        let alertButtonSecond = WAlertOptionButtonSecond(frame: CGRect(x: 0, y: 0, width: 100, height: 50), title: "")
+        let alertButtonSecond = WAlertOptionButtons(frame: CGRect(x: 0, y: 0, width: 100, height: 50), title: "")
         alertButtonSecond.showButtons(view: view)
         view.addSubview(alertButtonSecond)
         alertButtonSecond.delegates = self
