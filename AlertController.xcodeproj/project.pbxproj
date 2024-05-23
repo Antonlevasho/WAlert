@@ -17,9 +17,9 @@
 		5D3D15242BEEB03C00DC5E90 /* AlertControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15232BEEB03C00DC5E90 /* AlertControllerUITests.swift */; };
 		5D3D15262BEEB03C00DC5E90 /* AlertControllerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15252BEEB03C00DC5E90 /* AlertControllerUITestsLaunchTests.swift */; };
 		5D7021242BF5D27F0096F8B9 /* Extension WAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7021232BF5D27F0096F8B9 /* Extension WAlert.swift */; };
-		5D7073952BFB647300BB6DDF /* extension WAlertOptionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7073942BFB647300BB6DDF /* extension WAlertOptionButtons.swift */; };
-		5D7073972BFB65E000BB6DDF /* Extension WAlertOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7073962BFB65E000BB6DDF /* Extension WAlertOptionButton.swift */; };
 		5D7073992BFB677600BB6DDF /* WInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7073982BFB677600BB6DDF /* WInfo.swift */; };
+		5D70739C2BFCA24F00BB6DDF /* Class WAlertOptionButtons + protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70739B2BFCA24F00BB6DDF /* Class WAlertOptionButtons + protocol.swift */; };
+		5D7073A22BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7073A12BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +54,9 @@
 		5D3D15232BEEB03C00DC5E90 /* AlertControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerUITests.swift; sourceTree = "<group>"; };
 		5D3D15252BEEB03C00DC5E90 /* AlertControllerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5D7021232BF5D27F0096F8B9 /* Extension WAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension WAlert.swift"; sourceTree = "<group>"; };
-		5D7073942BFB647300BB6DDF /* extension WAlertOptionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension WAlertOptionButtons.swift"; sourceTree = "<group>"; };
-		5D7073962BFB65E000BB6DDF /* Extension WAlertOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension WAlertOptionButton.swift"; sourceTree = "<group>"; };
 		5D7073982BFB677600BB6DDF /* WInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WInfo.swift; sourceTree = "<group>"; };
+		5D70739B2BFCA24F00BB6DDF /* Class WAlertOptionButtons + protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class WAlertOptionButtons + protocol.swift"; sourceTree = "<group>"; };
+		5D7073A12BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAlertOptionButtonInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				5D7073982BFB677600BB6DDF /* WInfo.swift */,
+				5D7073A12BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift */,
 				5D7021232BF5D27F0096F8B9 /* Extension WAlert.swift */,
-				5D7073942BFB647300BB6DDF /* extension WAlertOptionButtons.swift */,
-				5D7073962BFB65E000BB6DDF /* Extension WAlertOptionButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -118,6 +117,7 @@
 		5D3D14FE2BEEB03900DC5E90 /* AlertController */ = {
 			isa = PBXGroup;
 			children = (
+				5D70739A2BFCA19B00BB6DDF /* Classes */,
 				5D3494A52BF5CD4600B0A909 /* Extensions */,
 				5D3D14FF2BEEB03900DC5E90 /* AppDelegate.swift */,
 				5D3D15012BEEB03900DC5E90 /* SceneDelegate.swift */,
@@ -145,6 +145,14 @@
 				5D3D15252BEEB03C00DC5E90 /* AlertControllerUITestsLaunchTests.swift */,
 			);
 			path = AlertControllerUITests;
+			sourceTree = "<group>";
+		};
+		5D70739A2BFCA19B00BB6DDF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5D70739B2BFCA24F00BB6DDF /* Class WAlertOptionButtons + protocol.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,12 +286,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D7021242BF5D27F0096F8B9 /* Extension WAlert.swift in Sources */,
+				5D70739C2BFCA24F00BB6DDF /* Class WAlertOptionButtons + protocol.swift in Sources */,
 				5D7073992BFB677600BB6DDF /* WInfo.swift in Sources */,
-				5D7073952BFB647300BB6DDF /* extension WAlertOptionButtons.swift in Sources */,
 				5D3D150A2BEEB03900DC5E90 /* AlertController.xcdatamodeld in Sources */,
 				5D3D15042BEEB03900DC5E90 /* ViewController.swift in Sources */,
+				5D7073A22BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift in Sources */,
 				5D3D15002BEEB03900DC5E90 /* AppDelegate.swift in Sources */,
-				5D7073972BFB65E000BB6DDF /* Extension WAlertOptionButton.swift in Sources */,
 				5D3D15022BEEB03900DC5E90 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
