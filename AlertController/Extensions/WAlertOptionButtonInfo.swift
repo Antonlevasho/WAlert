@@ -11,7 +11,7 @@ import UIKit
 struct WAlertOptionButtonInfo {
     
     let title: String
-    
+//    
 //    let cornersToRound: [WalertOptionbuttonCorner]
 //    
 //    enum WalertOptionbuttonCorner {

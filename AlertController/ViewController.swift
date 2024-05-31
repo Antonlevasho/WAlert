@@ -11,18 +11,24 @@ import UIKit
 class WAlert: UIView {
     
     var title: String?
+    
     //MARK: - настройка вью(квадрата)
     override init(frame: CGRect) {
         
-        super.init(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        super.init(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
         self.title = "asdasd"
         self.backgroundColor = .lightGray
         self.layer.cornerRadius = 20
         
    
-        let info = WAlertOptionButtonInfo(title: "Andnn")
-        var button = WAlertOptionButton(info: info)
+        let info = WAlertOptionButtonInfo(title: "sasx")
+        let button = WAlertOptionButton(info: info)
+        let buttonTwo = WAlertOptionButton(info: info)
         
+        self.addSubview(button)
+    
+
+    
       
 
     }
@@ -46,10 +52,9 @@ class WViewController: UIViewController {
         let alertController = WAlert(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         alertController.showAlert(onView: self.view)
         
-      
         
         
-
+        
 }
 }
 

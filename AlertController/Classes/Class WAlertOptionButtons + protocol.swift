@@ -32,7 +32,6 @@ class WAlertOptionButton: UIView {
     public init(info:  WAlertOptionButtonInfo?) {
         self.info = info
         self.isHighlighted = false
-        
         super.init(frame: .zero)
         initialize()
         
@@ -58,11 +57,12 @@ extension WAlertOptionButton {
     func initialize() {
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.backgroundColor = .black
+        titleLabel.backgroundColor = .cyan
         
-        titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        titleLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 80).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: 150).isActive = true
+        
+        titleLabel.widthAnchor.constraint(equalToConstant: 120).isActive = true
         titleLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true 
     }
 }
