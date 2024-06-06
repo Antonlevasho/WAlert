@@ -1,34 +1,20 @@
 import UIKit
 
-//struct WAlertinfo {
-//
-//let content: WAlertContent
-//let buttonsInfo: WButtonInfo
-//
-//}
-
-//struct WButtonsInfo {
-//    
-//var buttonsAlighment: WButtonsAlighment
-//    
-//}
-
-//enum WButtonsAlighment {
-//    case vertical
-//    case horizontal
-//}
-
-struct WAlertContent {
-    
+struct WAlertInfo {
+    let content: WAlertContent
+    let buttonsInfo: WButtonsInfo
 }
 
-//struct WButtonInfo {
-//    let title: String
-//    let cornersToRound: [WalertOptionbuttonCorner]
-//}
+struct WButtonsInfo {
+    let buttonsAlighment: WButtonsAlighment
+    let buttons: [WAlertOptionButtonInfo]
+}
 
-enum WalertOptionbuttonCorner {
-    case bottomLeft
-    case bottomRight
+enum WButtonsAlighment {
+    case vertical
+    case horizontal
+}
+
+struct WAlertContent {
     
 }

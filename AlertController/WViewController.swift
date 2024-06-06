@@ -2,6 +2,28 @@ import UIKit
     
 //MARK: - WViewController
 class WViewController: UIViewController {
+    // MARK: - Public
+    func showAlert(with info: WAlertInfo) {
+        let alert = WAlert(info: info)
+        view.addSubview(alert)
+
+        NSLayoutConstraint.activate([
+            alert.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
+            alert.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
+            alert.topAnchor.constraint(equalTo: view.topAnchor, constant: 300),
+            alert.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -300),
+        ])
+
+
+        alert.center = view.center
+        alert.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        alert.alpha = 0
+        UIView.animate(withDuration: 0.25) {
+            alert.alpha = 1
+            alert.transform = CGAffineTransform.identity
+        }
+    }
+
     // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +52,11 @@ private extension WViewController {
     }
 
     @objc func didTapAlertButton() {
-        let alertController = WAlert(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        alertController.showAlert(onView: self.view)
+        let buttonsInfo = WButtonsInfo(buttonsAlighment: .horizontal, buttons: [
+            WAlertOptionButtonInfo(title: "Button1", cornersToRound: [.bottomLeft]),
+            WAlertOptionButtonInfo(title: "Button2", cornersToRound: [.bottomRight]),
+        ])
+        let info = WAlertInfo(content: .init(), buttonsInfo: buttonsInfo)
+        showAlert(with: info)
     }
 }

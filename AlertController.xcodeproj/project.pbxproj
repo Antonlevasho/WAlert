@@ -104,6 +104,7 @@
 		233636992C11D4EC001ECB11 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5D3D15082BEEB03900DC5E90 /* AlertController.xcdatamodeld */,
 				5D3D150B2BEEB03C00DC5E90 /* Assets.xcassets */,
 				5D3D150D2BEEB03C00DC5E90 /* LaunchScreen.storyboard */,
 				5D3D15102BEEB03C00DC5E90 /* Info.plist */,
@@ -149,7 +150,6 @@
 				5D3D15032BEEB03900DC5E90 /* WViewController.swift */,
 				233636972C11D4B9001ECB11 /* Views */,
 				233636992C11D4EC001ECB11 /* Resources */,
-				5D3D15082BEEB03900DC5E90 /* AlertController.xcdatamodeld */,
 			);
 			path = AlertController;
 			sourceTree = "<group>";

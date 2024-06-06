@@ -5,6 +5,9 @@ protocol WAlertOptionButtonDelegate: AnyObject {
 }
 
 final class WAlertOptionButton: UIView {
+    // MARK: - Public
+    weak var delegate: WAlertOptionButtonDelegate?
+
     // MARK: - Init
     public init(info: WAlertOptionButtonInfo) {
         self.info = info
@@ -17,6 +20,25 @@ final class WAlertOptionButton: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - View lifecycle
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isHighlighted = true
+    }
+
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isHighlighted = true
+        handleTouch(touches, touchEnded: false)
+    }
+
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isHighlighted = false
+        handleTouch(touches, touchEnded: true)
+    }
+
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isHighlighted = false
+    }
+
     // MARK: - Private properties
     private let info: WAlertOptionButtonInfo
 
@@ -26,15 +48,17 @@ final class WAlertOptionButton: UIView {
                             delay: .zero,
                             options: [.curveEaseOut, .allowUserInteraction],
                            animations: {
-                // тут положить дополнительные анимации при нажатии, например поменять цвет
+                self.transform = self.isHighlighted ? CGAffineTransform(scaleX: 0.95, y: 0.95) : .identity
             }, completion: nil)
         }
     }
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Hello"
-        label.backgroundColor = .black
+        label.text = info.title
+        label.isUserInteractionEnabled = true
+        label.backgroundColor = .cyan
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 }
@@ -43,13 +67,39 @@ final class WAlertOptionButton: UIView {
 private extension WAlertOptionButton {
     func initialize() {
         addSubview(titleLabel)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.backgroundColor = .cyan
-        
-        titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 80).isActive = true
-        titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: 150).isActive = true
-        
-        titleLabel.widthAnchor.constraint(equalToConstant: 120).isActive = true
-        titleLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true 
+
+
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: .zero),
+            titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant:  .zero),
+//            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: .zero),
+//            titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant:  .zero),
+        ])
+    }
+
+    func handleTouch(_ touches: Set<UITouch>, touchEnded: Bool) {
+        if let touchLocationInSuperview: CGPoint = touches.first?.location(in: self.superview) {
+            let touchLocation: CGPoint = self.convert(touchLocationInSuperview, to: self)
+            if frame.contains(touchLocation) {
+                if touchEnded {
+                    animateToDefaultState()
+                    delegate?.didTap(from: self)
+                } else {
+                    animateToActiveState()
+                }
+            } else {
+                animateToDefaultState()
+            }
+        } else {
+            animateToDefaultState()
+        }
+    }
+
+    func animateToActiveState() {
+        isHighlighted = true
+    }
+
+    func animateToDefaultState() {
+        isHighlighted = false
     }
 }

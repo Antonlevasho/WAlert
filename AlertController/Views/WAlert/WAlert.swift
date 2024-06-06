@@ -5,39 +5,39 @@ final class WAlert: UIView {
     var title: String?
 
     //MARK: - Init
-    override init(frame: CGRect) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
-        self.title = "asdasd"
-        self.backgroundColor = .lightGray
-        self.layer.cornerRadius = 20
+    init(info: WAlertInfo) {
+        super.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = .lightGray
+        layer.cornerRadius = 20
 
+        let stackView = UIStackView()
+        switch info.buttonsInfo.buttonsAlighment {
+        case .vertical:
+            stackView.axis = .vertical
+        case .horizontal:
+            stackView.axis = .horizontal
+        }
+        addSubview(stackView)
+        NSLayoutConstraint.activate([
+            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .zero),
+            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant:  .zero),
+            stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: .zero),
+            stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant:  .zero),
+        ])
 
-        let info = WAlertOptionButtonInfo(title: "sasx")
-        let button = WAlertOptionButton(info: info)
-        let buttonTwo = WAlertOptionButton(info: info)
+        let info1 = WAlertOptionButtonInfo(title: "Dummy title", cornersToRound: [.bottomLeft, .bottomRight])
+        let button1 = WAlertOptionButton(info: info1)
 
-        self.addSubview(button)
+        let info2 = WAlertOptionButtonInfo(title: "Dummy title", cornersToRound: [.bottomLeft])
+        let button2 = WAlertOptionButton(info: info2)
 
-
-
-
-
+        stackView.backgroundColor = .yellow
+        stackView.addArrangedSubview(button1)
+        stackView.addArrangedSubview(button2)
     }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    func showAlert(onView view: UIView) {
-        self.center = view.center
-        view.addSubview(self)
-
-        // Анимация появления
-        self.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
-        self.alpha = 0
-        UIView.animate(withDuration: 0.25) {
-            self.alpha = 1
-            self.transform = CGAffineTransform.identity
-        }
-    }
-
 }
