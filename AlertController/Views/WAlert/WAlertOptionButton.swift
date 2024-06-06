@@ -56,8 +56,6 @@ final class WAlertOptionButton: UIView {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = info.title
-        label.isUserInteractionEnabled = true
-        label.backgroundColor = .cyan
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -66,14 +64,12 @@ final class WAlertOptionButton: UIView {
 // MARK: - Private methods
 private extension WAlertOptionButton {
     func initialize() {
+        backgroundColor = .red
+        translatesAutoresizingMaskIntoConstraints = false
         addSubview(titleLabel)
-
-
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: .zero),
             titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant:  .zero),
-//            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: .zero),
-//            titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant:  .zero),
         ])
     }
 

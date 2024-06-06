@@ -53,8 +53,8 @@ private extension WViewController {
 
     @objc func didTapAlertButton() {
         let buttonsInfo = WButtonsInfo(buttonsAlighment: .horizontal, buttons: [
-            WAlertOptionButtonInfo(title: "Button1", cornersToRound: [.bottomLeft]),
-            WAlertOptionButtonInfo(title: "Button2", cornersToRound: [.bottomRight]),
+            WAlertOptionButtonInfo(title: "title1", cornersToRound: [.bottomLeft]),
+            WAlertOptionButtonInfo(title: "title2", cornersToRound: [.bottomRight]),
         ])
         let info = WAlertInfo(content: .init(), buttonsInfo: buttonsInfo)
         showAlert(with: info)
