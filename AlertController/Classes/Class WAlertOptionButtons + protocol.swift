@@ -1,19 +1,10 @@
-//
-//  Class + protocol.swift
-//  AlertController
-//
-//  Created by Анастасия on 21.05.2024.
-//
-
-import Foundation
 import UIKit
 
-//protocol WAlertOptionButtonDelegate: AnyObject {
-//    func didTap(from: UIView)
-//}
+protocol WAlertOptionButtonDelegate: AnyObject {
+    func didTap(from view: WAlertOptionButton)
+}
 
-
-class WAlertOptionButton: UIView {
+final class WAlertOptionButton: UIView {
 
     var info:  WAlertOptionButtonInfo?
     
