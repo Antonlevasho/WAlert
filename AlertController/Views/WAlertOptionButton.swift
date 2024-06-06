@@ -5,11 +5,22 @@ protocol WAlertOptionButtonDelegate: AnyObject {
 }
 
 final class WAlertOptionButton: UIView {
+    // MARK: - Init
+    public init(info: WAlertOptionButtonInfo) {
+        self.info = info
+        self.isHighlighted = false
+        super.init(frame: .zero)
+        initialize()
+    }
 
-    var info:  WAlertOptionButtonInfo?
-    
-    
-    var isHighlighted: Bool {
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - Private properties
+    private let info: WAlertOptionButtonInfo
+
+    private var isHighlighted: Bool {
         didSet {
             UIView.animate(withDuration: 0.5,
                             delay: .zero,
@@ -19,32 +30,17 @@ final class WAlertOptionButton: UIView {
             }, completion: nil)
         }
     }
-    
-    public init(info:  WAlertOptionButtonInfo?) {
-        self.info = info
-        self.isHighlighted = false
-        super.init(frame: .zero)
-        initialize()
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
+
     private lazy var titleLabel: UILabel = {
-        
         let label = UILabel()
         label.text = "Hello"
         label.backgroundColor = .black
-        
-        
         return label
     }()
 }
 
-extension WAlertOptionButton {
+// MARK: - Private methods
+private extension WAlertOptionButton {
     func initialize() {
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -57,5 +53,3 @@ extension WAlertOptionButton {
         titleLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true 
     }
 }
-
-    

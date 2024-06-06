@@ -1,11 +1,4 @@
-//
-//  WButtonIfoCorner.swift
-//  AlertController
-//
-//  Created by Анастасия on 21.05.2024.
-//
 
-import Foundation
 import UIKit
 
 struct WAlertOptionButtonInfo {
@@ -20,6 +13,3 @@ struct WAlertOptionButtonInfo {
 //
 //    }
 }
-
-
-

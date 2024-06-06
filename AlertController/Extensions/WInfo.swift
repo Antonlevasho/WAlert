@@ -1,11 +1,3 @@
-//
-//  Info.swift
-//  AlertController
-//
-//  Created by Анастасия on 20.05.2024.
-//
-
-import Foundation
 import UIKit
 
 //struct WAlertinfo {
