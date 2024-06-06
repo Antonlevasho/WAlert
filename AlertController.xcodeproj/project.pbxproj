@@ -10,7 +10,7 @@
 		2336369B2C11D52A001ECB11 /* WAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336369A2C11D52A001ECB11 /* WAlert.swift */; };
 		5D3D15002BEEB03900DC5E90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D14FF2BEEB03900DC5E90 /* AppDelegate.swift */; };
 		5D3D15022BEEB03900DC5E90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15012BEEB03900DC5E90 /* SceneDelegate.swift */; };
-		5D3D15042BEEB03900DC5E90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15032BEEB03900DC5E90 /* ViewController.swift */; };
+		5D3D15042BEEB03900DC5E90 /* WViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15032BEEB03900DC5E90 /* WViewController.swift */; };
 		5D3D150A2BEEB03900DC5E90 /* AlertController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15082BEEB03900DC5E90 /* AlertController.xcdatamodeld */; };
 		5D3D150C2BEEB03C00DC5E90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3D150B2BEEB03C00DC5E90 /* Assets.xcassets */; };
 		5D3D150F2BEEB03C00DC5E90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3D150D2BEEB03C00DC5E90 /* LaunchScreen.storyboard */; };
@@ -44,7 +44,7 @@
 		5D3D14FC2BEEB03900DC5E90 /* AlertController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3D14FF2BEEB03900DC5E90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D3D15012BEEB03900DC5E90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5D3D15032BEEB03900DC5E90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5D3D15032BEEB03900DC5E90 /* WViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WViewController.swift; sourceTree = "<group>"; };
 		5D3D15092BEEB03900DC5E90 /* AlertController.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AlertController.xcdatamodel; sourceTree = "<group>"; };
 		5D3D150B2BEEB03C00DC5E90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D3D150E2BEEB03C00DC5E90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				233636982C11D4DB001ECB11 /* Application */,
-				5D3D15032BEEB03900DC5E90 /* ViewController.swift */,
+				5D3D15032BEEB03900DC5E90 /* WViewController.swift */,
 				233636972C11D4B9001ECB11 /* Views */,
 				233636992C11D4EC001ECB11 /* Resources */,
 				5D3D15082BEEB03900DC5E90 /* AlertController.xcdatamodeld */,
@@ -305,7 +305,7 @@
 				5D7073992BFB677600BB6DDF /* WAlertInfo.swift in Sources */,
 				2336369B2C11D52A001ECB11 /* WAlert.swift in Sources */,
 				5D3D150A2BEEB03900DC5E90 /* AlertController.xcdatamodeld in Sources */,
-				5D3D15042BEEB03900DC5E90 /* ViewController.swift in Sources */,
+				5D3D15042BEEB03900DC5E90 /* WViewController.swift in Sources */,
 				5D7073A22BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift in Sources */,
 				5D3D15002BEEB03900DC5E90 /* AppDelegate.swift in Sources */,
 				5D3D15022BEEB03900DC5E90 /* SceneDelegate.swift in Sources */,
