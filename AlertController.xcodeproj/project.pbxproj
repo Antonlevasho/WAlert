@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2336369B2C11D52A001ECB11 /* WAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336369A2C11D52A001ECB11 /* WAlert.swift */; };
 		5D3D15002BEEB03900DC5E90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D14FF2BEEB03900DC5E90 /* AppDelegate.swift */; };
 		5D3D15022BEEB03900DC5E90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15012BEEB03900DC5E90 /* SceneDelegate.swift */; };
-		5D3D15042BEEB03900DC5E90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15032BEEB03900DC5E90 /* ViewController.swift */; };
+		5D3D15042BEEB03900DC5E90 /* WViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15032BEEB03900DC5E90 /* WViewController.swift */; };
 		5D3D150A2BEEB03900DC5E90 /* AlertController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15082BEEB03900DC5E90 /* AlertController.xcdatamodeld */; };
 		5D3D150C2BEEB03C00DC5E90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3D150B2BEEB03C00DC5E90 /* Assets.xcassets */; };
 		5D3D150F2BEEB03C00DC5E90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3D150D2BEEB03C00DC5E90 /* LaunchScreen.storyboard */; };
 		5D3D151A2BEEB03C00DC5E90 /* AlertControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15192BEEB03C00DC5E90 /* AlertControllerTests.swift */; };
 		5D3D15242BEEB03C00DC5E90 /* AlertControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15232BEEB03C00DC5E90 /* AlertControllerUITests.swift */; };
 		5D3D15262BEEB03C00DC5E90 /* AlertControllerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D15252BEEB03C00DC5E90 /* AlertControllerUITestsLaunchTests.swift */; };
-		5D7021242BF5D27F0096F8B9 /* Extension WAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7021232BF5D27F0096F8B9 /* Extension WAlert.swift */; };
+		5D7073992BFB677600BB6DDF /* WAlertInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7073982BFB677600BB6DDF /* WAlertInfo.swift */; };
+		5D70739C2BFCA24F00BB6DDF /* WAlertOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70739B2BFCA24F00BB6DDF /* WAlertOptionButton.swift */; };
+		5D7073A22BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7073A12BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2336369A2C11D52A001ECB11 /* WAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAlert.swift; sourceTree = "<group>"; };
 		5D3D14FC2BEEB03900DC5E90 /* AlertController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3D14FF2BEEB03900DC5E90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D3D15012BEEB03900DC5E90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5D3D15032BEEB03900DC5E90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5D3D15032BEEB03900DC5E90 /* WViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WViewController.swift; sourceTree = "<group>"; };
 		5D3D15092BEEB03900DC5E90 /* AlertController.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AlertController.xcdatamodel; sourceTree = "<group>"; };
 		5D3D150B2BEEB03C00DC5E90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D3D150E2BEEB03C00DC5E90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,7 +54,9 @@
 		5D3D151F2BEEB03C00DC5E90 /* AlertControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3D15232BEEB03C00DC5E90 /* AlertControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerUITests.swift; sourceTree = "<group>"; };
 		5D3D15252BEEB03C00DC5E90 /* AlertControllerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5D7021232BF5D27F0096F8B9 /* Extension WAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension WAlert.swift"; sourceTree = "<group>"; };
+		5D7073982BFB677600BB6DDF /* WAlertInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAlertInfo.swift; sourceTree = "<group>"; };
+		5D70739B2BFCA24F00BB6DDF /* WAlertOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAlertOptionButton.swift; sourceTree = "<group>"; };
+		5D7073A12BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAlertOptionButtonInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,12 +84,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D3494A52BF5CD4600B0A909 /* Extensions */ = {
+		233636972C11D4B9001ECB11 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5D7021232BF5D27F0096F8B9 /* Extension WAlert.swift */,
+				2336369C2C11D688001ECB11 /* WAlert */,
 			);
-			path = Extensions;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		233636982C11D4DB001ECB11 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5D3D14FF2BEEB03900DC5E90 /* AppDelegate.swift */,
+				5D3D15012BEEB03900DC5E90 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		233636992C11D4EC001ECB11 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D3D15082BEEB03900DC5E90 /* AlertController.xcdatamodeld */,
+				5D3D150B2BEEB03C00DC5E90 /* Assets.xcassets */,
+				5D3D150D2BEEB03C00DC5E90 /* LaunchScreen.storyboard */,
+				5D3D15102BEEB03C00DC5E90 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2336369C2C11D688001ECB11 /* WAlert */ = {
+			isa = PBXGroup;
+			children = (
+				5D7073982BFB677600BB6DDF /* WAlertInfo.swift */,
+				5D7073A12BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift */,
+				5D70739B2BFCA24F00BB6DDF /* WAlertOptionButton.swift */,
+				2336369A2C11D52A001ECB11 /* WAlert.swift */,
+			);
+			path = WAlert;
 			sourceTree = "<group>";
 		};
 		5D3D14F32BEEB03900DC5E90 = {
@@ -109,14 +146,10 @@
 		5D3D14FE2BEEB03900DC5E90 /* AlertController */ = {
 			isa = PBXGroup;
 			children = (
-				5D3494A52BF5CD4600B0A909 /* Extensions */,
-				5D3D14FF2BEEB03900DC5E90 /* AppDelegate.swift */,
-				5D3D15012BEEB03900DC5E90 /* SceneDelegate.swift */,
-				5D3D15032BEEB03900DC5E90 /* ViewController.swift */,
-				5D3D150B2BEEB03C00DC5E90 /* Assets.xcassets */,
-				5D3D150D2BEEB03C00DC5E90 /* LaunchScreen.storyboard */,
-				5D3D15102BEEB03C00DC5E90 /* Info.plist */,
-				5D3D15082BEEB03900DC5E90 /* AlertController.xcdatamodeld */,
+				233636982C11D4DB001ECB11 /* Application */,
+				5D3D15032BEEB03900DC5E90 /* WViewController.swift */,
+				233636972C11D4B9001ECB11 /* Views */,
+				233636992C11D4EC001ECB11 /* Resources */,
 			);
 			path = AlertController;
 			sourceTree = "<group>";
@@ -268,9 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D7021242BF5D27F0096F8B9 /* Extension WAlert.swift in Sources */,
+				5D70739C2BFCA24F00BB6DDF /* WAlertOptionButton.swift in Sources */,
+				5D7073992BFB677600BB6DDF /* WAlertInfo.swift in Sources */,
+				2336369B2C11D52A001ECB11 /* WAlert.swift in Sources */,
 				5D3D150A2BEEB03900DC5E90 /* AlertController.xcdatamodeld in Sources */,
-				5D3D15042BEEB03900DC5E90 /* ViewController.swift in Sources */,
+				5D3D15042BEEB03900DC5E90 /* WViewController.swift in Sources */,
+				5D7073A22BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift in Sources */,
 				5D3D15002BEEB03900DC5E90 /* AppDelegate.swift in Sources */,
 				5D3D15022BEEB03900DC5E90 /* SceneDelegate.swift in Sources */,
 			);
@@ -442,7 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AlertController/Info.plist;
+				INFOPLIST_FILE = AlertController/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -468,7 +504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AlertController/Info.plist;
+				INFOPLIST_FILE = AlertController/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
