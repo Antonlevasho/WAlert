@@ -21,7 +21,7 @@ private extension WAlert {
     func initialize() {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .lightGray
-        layer.cornerRadius = 20
+        layer.cornerRadius = 10
 
         let stackView = UIStackView()
         switch info.buttonsInfo.buttonsAlighment {
@@ -31,20 +31,35 @@ private extension WAlert {
             stackView.axis = .horizontal
         }
         stackView.distribution = .fillEqually
-        stackView.alignment = .fill
+        stackView.alignment = .bottom
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        
         addSubview(stackView)
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .zero),
-            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant:  .zero),
+            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: .zero),
             stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
             stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant:  .zero),
         ])
 
         info.buttonsInfo.buttons.forEach {
+        
             let info = WAlertOptionButtonInfo(title: $0.title, cornersToRound: $0.cornersToRound)
             let button = WAlertOptionButton(info: info)
+            
+            button.clipsToBounds = true
+            button.layer.cornerRadius = 10
+            
+            let myCorner: [WalertOptionbuttonCorner] = info.cornersToRound
+            let myMask: CACornerMask = myCorner.toCACornerMask()
+            button.layer.maskedCorners = myMask
+           
             stackView.addArrangedSubview(button)
+            
+            
+                   button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+                   button.widthAnchor.constraint(equalToConstant: 50).isActive = true
         }
     }
 }
+

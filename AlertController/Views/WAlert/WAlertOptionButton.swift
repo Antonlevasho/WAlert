@@ -71,6 +71,10 @@ private extension WAlertOptionButton {
             titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: .zero),
             titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant:  .zero),
         ])
+        
+        
+        
+        
     }
 
     func handleTouch(_ touches: Set<UITouch>, touchEnded: Bool) {
