@@ -31,15 +31,19 @@ private extension WAlert {
             stackView.axis = .horizontal
         }
         stackView.distribution = .fillEqually
-        stackView.alignment = .bottom
+        stackView.alignment = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        stackView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        stackView.isLayoutMarginsRelativeArrangement = true
+        
         
         addSubview(stackView)
         NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .zero),
-            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: .zero),
-            stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
-            stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant:  .zero),
+            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 195),
+//            stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant:  .zero),
         ])
 
         info.buttonsInfo.buttons.forEach {
