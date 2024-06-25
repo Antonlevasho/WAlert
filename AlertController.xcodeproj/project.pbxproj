@@ -20,6 +20,7 @@
 		5D7073992BFB677600BB6DDF /* WAlertInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7073982BFB677600BB6DDF /* WAlertInfo.swift */; };
 		5D70739C2BFCA24F00BB6DDF /* WAlertOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70739B2BFCA24F00BB6DDF /* WAlertOptionButton.swift */; };
 		5D7073A22BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7073A12BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift */; };
+		5D79E30F2C2AAC8300630614 /* WalertOptionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D79E30E2C2AAC8300630614 /* WalertOptionContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		5D7073982BFB677600BB6DDF /* WAlertInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAlertInfo.swift; sourceTree = "<group>"; };
 		5D70739B2BFCA24F00BB6DDF /* WAlertOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAlertOptionButton.swift; sourceTree = "<group>"; };
 		5D7073A12BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAlertOptionButtonInfo.swift; sourceTree = "<group>"; };
+		5D79E30E2C2AAC8300630614 /* WalertOptionContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalertOptionContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				5D7073982BFB677600BB6DDF /* WAlertInfo.swift */,
 				5D7073A12BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift */,
 				5D70739B2BFCA24F00BB6DDF /* WAlertOptionButton.swift */,
+				5D79E30E2C2AAC8300630614 /* WalertOptionContent.swift */,
 				2336369A2C11D52A001ECB11 /* WAlert.swift */,
 			);
 			path = WAlert;
@@ -305,6 +308,7 @@
 				5D7073992BFB677600BB6DDF /* WAlertInfo.swift in Sources */,
 				2336369B2C11D52A001ECB11 /* WAlert.swift in Sources */,
 				5D3D150A2BEEB03900DC5E90 /* AlertController.xcdatamodeld in Sources */,
+				5D79E30F2C2AAC8300630614 /* WalertOptionContent.swift in Sources */,
 				5D3D15042BEEB03900DC5E90 /* WViewController.swift in Sources */,
 				5D7073A22BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift in Sources */,
 				5D3D15002BEEB03900DC5E90 /* AppDelegate.swift in Sources */,

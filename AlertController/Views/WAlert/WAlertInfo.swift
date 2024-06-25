@@ -1,8 +1,14 @@
 import UIKit
 
 struct WAlertInfo {
-    let content: WAlertContent
+    let content: WalertContentItemType
     let buttonsInfo: WButtonsInfo
+}
+
+enum WalertContentItemType {
+    case title      //(text: String)
+    case subtitle (text: String)
+    case image (image: UIImage)
 }
 
 struct WButtonsInfo {

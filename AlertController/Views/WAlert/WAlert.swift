@@ -6,6 +6,7 @@ final class WAlert: UIView {
         self.info = info
         super.init(frame: .zero)
         initialize()
+        initializeTitleLabel()
     }
 
     required init?(coder: NSCoder) {
@@ -37,13 +38,11 @@ private extension WAlert {
         stackView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         stackView.isLayoutMarginsRelativeArrangement = true
         
-        
         addSubview(stackView)
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 195),
-//            stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant:  .zero),
         ])
 
         info.buttonsInfo.buttons.forEach {
@@ -54,16 +53,45 @@ private extension WAlert {
             button.clipsToBounds = true
             button.layer.cornerRadius = 10
             
-            let myCorner: [WalertOptionbuttonCorner] = info.cornersToRound
-            let myMask: CACornerMask = myCorner.toCACornerMask()
-            button.layer.maskedCorners = myMask
+            button.layer.maskedCorners = info.cornersToRound.toCACornerMask()
            
             stackView.addArrangedSubview(button)
             
-            
                    button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-                   button.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        }
+}
     }
 }
 
+extension WAlert {
+    func initializeTitleLabel() {
+        translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = .black
+        layer.cornerRadius = 10
+        
+        let stackViewContent = UIStackView()
+        switch info.content {
+            
+        case .title:
+            stackViewContent.axis = .vertical
+        case .subtitle(text: let text):
+            stackViewContent.axis = .vertical
+        case .image(image: let image):
+            stackViewContent.axis = .vertical
+        }
+        stackViewContent.distribution = .fillEqually
+        stackViewContent.alignment = .fill
+        stackViewContent.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        stackViewContent.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        stackViewContent.isLayoutMarginsRelativeArrangement = true
+        
+        addSubview(stackViewContent)
+        NSLayoutConstraint.activate([
+            stackViewContent.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            stackViewContent.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            stackViewContent.topAnchor.constraint(equalTo: self.topAnchor, constant: 195),
+        ])
+        
+    }
+}

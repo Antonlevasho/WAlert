@@ -18,7 +18,6 @@ enum WalertOptionbuttonCorner {
                 return .layerMaxXMaxYCorner
             }
         }
-
 }
 
 extension Array where Element == WalertOptionbuttonCorner {
