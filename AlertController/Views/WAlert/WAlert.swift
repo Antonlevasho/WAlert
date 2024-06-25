@@ -58,6 +58,40 @@ private extension WAlert {
             
                    button.heightAnchor.constraint(equalToConstant: 50).isActive = true
 }
+        let stackViewContent = UIStackView()
+        
+        stackViewContent.axis = .vertical
+        
+        
+        stackViewContent.distribution = .fillEqually
+        stackViewContent.alignment = .fill
+        stackViewContent.translatesAutoresizingMaskIntoConstraints = false
+        
+        stackViewContent.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        stackViewContent.isLayoutMarginsRelativeArrangement = true
+        
+        addSubview(stackViewContent)
+        NSLayoutConstraint.activate([
+            stackViewContent.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            stackViewContent.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            stackViewContent.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            stackViewContent.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100),
+
+        ])
+        
+        let labels = UILabel()
+        labels.text = "текст"
+        labels.backgroundColor = .red
+        labels.numberOfLines = 0
+        
+        let label2 = UILabel()
+        label2.text = "текст2"
+        label2.backgroundColor = .yellow
+        label2.numberOfLines = 0
+  
+       
+        stackViewContent.addArrangedSubview(labels)
+        stackViewContent.addArrangedSubview(label2)
     }
 }
 

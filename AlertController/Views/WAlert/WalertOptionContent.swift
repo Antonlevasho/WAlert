@@ -10,10 +10,9 @@ import UIKit
 
 final class WAlertOptionContent: UIView {
     
-    public init (info: WalertContentItemType) {
+    public init (info: WAlertContentItemType) {
         self.info = info
         super.init(frame: .zero)
-        initialize()
 
     }
     
@@ -21,31 +20,11 @@ final class WAlertOptionContent: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private let info: WalertContentItemType
-        
-        private lazy var titleLabels: UILabel = {
-            let label = UILabel()
-            label.text = "hello"
-            label.textColor = .white
-            label.translatesAutoresizingMaskIntoConstraints = false
-            return label
-        }()
-    
-    
+    private let info: WAlertContentItemType
 }
 
 extension WAlertOptionContent {
-    
-    func initialize() {
-        self.addSubview(titleLabels)
-        titleLabels.translatesAutoresizingMaskIntoConstraints = false
-        
-        titleLabels.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
-        titleLabels.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        titleLabels.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        titleLabels.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true 
-        
-    }
+
     
     
 }
