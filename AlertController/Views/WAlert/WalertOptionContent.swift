@@ -25,7 +25,7 @@ final class WAlertOptionContent: UIView {
         
         private lazy var titleLabels: UILabel = {
             let label = UILabel()
-            label.text = "Hello"
+            label.text = "hello"
             label.textColor = .white
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
@@ -40,8 +40,10 @@ extension WAlertOptionContent {
         self.addSubview(titleLabels)
         titleLabels.translatesAutoresizingMaskIntoConstraints = false
         
-        titleLabels.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 100).isActive = true
-        titleLabels.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -100).isActive = true
+        titleLabels.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
+        titleLabels.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        titleLabels.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        titleLabels.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true 
         
     }
     

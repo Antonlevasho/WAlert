@@ -6,9 +6,9 @@ struct WAlertInfo {
 }
 
 enum WalertContentItemType {
-    case title      //(text: String)
-    case subtitle (text: String)
-    case image (image: UIImage)
+    case title(text: String)
+    case subtitle(text: String)
+    case image(image: UIImage)
 }
 
 struct WButtonsInfo {
