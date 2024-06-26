@@ -58,6 +58,7 @@ private extension WAlert {
             
                    button.heightAnchor.constraint(equalToConstant: 50).isActive = true
 }
+        
         let stackViewContent = UIStackView()
         
         stackViewContent.axis = .vertical
@@ -79,19 +80,22 @@ private extension WAlert {
 
         ])
         
-        let labels = UILabel()
-        labels.text = "текст"
-        labels.backgroundColor = .red
-        labels.numberOfLines = 0
+        info.content.forEach({
+            switch $0 {
+            case .title(let text):
+                let view = WAlertContentTitleView(text: "sasd")
+            case .subtitle(let text):
+                let subTitle = WAlertContentSubtitleView(text: "Sadsad")
+            case .image(let image):
+                let image = WAlertImageContent(image: image)
+    
+            }
+            //вот дальше чуть подзабыл что надо сделать
+            //получается надо добавить теперь в стек вью верно? 
         
-        let label2 = UILabel()
-        label2.text = "текст2"
-        label2.backgroundColor = .yellow
-        label2.numberOfLines = 0
-  
-       
-        stackViewContent.addArrangedSubview(labels)
-        stackViewContent.addArrangedSubview(label2)
+            })
+                
+            }
     }
-}
+
 

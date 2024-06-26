@@ -1,7 +1,7 @@
 import UIKit
 
 struct WAlertInfo {
-    let content: WAlertContentItemType
+    let content: [WAlertContentItemType]
     let buttonsInfo: WButtonsInfo
 }
 

@@ -56,7 +56,7 @@ private extension WViewController {
             WAlertOptionButtonInfo(title: "title1", cornersToRound: [.bottomLeft]),
             WAlertOptionButtonInfo(title: "title2", cornersToRound: [.bottomRight]),
         ])
-        let info = WAlertInfo(content: .title(text: "Hello"),  buttonsInfo: buttonsInfo)
+        let info = WAlertInfo(content: [.title(text: "asdasd")],  buttonsInfo: buttonsInfo)
         showAlert(with: info)
     }
 }
