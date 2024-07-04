@@ -15,14 +15,11 @@ class WAlertImageContent: UIView {
             imageContentView.image = image
             initializes()
         }
-        
         required init?(coder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
-        
         private lazy var imageContentView: UIImageView = {
                     let image = UIImageView()
-            
                     return image
                 }()
     }

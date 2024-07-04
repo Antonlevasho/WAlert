@@ -22,87 +22,118 @@ private extension WAlert {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .lightGray
         layer.cornerRadius = 10
-
-        let stackView = UIStackView()
+        
+        
+        //MARK: -contentStackView
+        
+//        let alertStackView = UIStackView()
+//
+//        addSubview(alertStackView)
+//        alertStackView.translatesAutoresizingMaskIntoConstraints = false
+//        alertStackView.axis = .vertical
+//        alertStackView.distribution = .fillEqually
+//        alertStackView.alignment = .fill
+//        alertStackView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+//        alertStackView.isLayoutMarginsRelativeArrangement = true
+//        alertStackView.backgroundColor = .brown
+//
+//        NSLayoutConstraint.activate([
+//            alertStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+//            alertStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+//            alertStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+//            alertStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100),
+//            ])
+//
+//        alertStackView.addArrangedSubview(contentStackView)
+//
+        
+        
+        
+        //MARK: -contentStackView
+        let contentStackView = UIStackView()
+        contentStackView.axis = .vertical
+        contentStackView.distribution = .fillEqually
+        contentStackView.alignment = .fill
+        contentStackView.translatesAutoresizingMaskIntoConstraints = false
+        contentStackView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        contentStackView.isLayoutMarginsRelativeArrangement = true
+        
+        addSubview(contentStackView)
+        NSLayoutConstraint.activate([
+            contentStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            contentStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            contentStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            contentStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100),
+        ])
+        info.content.forEach({
+            switch $0 {
+            case .title(let textTitle):
+                let title = WAlertContentTitleView(text: textTitle)
+                contentStackView.addArrangedSubview(title)
+            case .subtitle(let text):
+                let subTitle = WAlertContentSubtitleView(text: text)
+                contentStackView.addArrangedSubview(subTitle)
+            case .image(let imageContentView):
+                let image = WAlertImageContent(image: imageContentView)
+                contentStackView.addArrangedSubview(image)
+            }
+            })
+        //MARK: -buttonsStackView
+        let buttonsStackView = UIStackView()
         switch info.buttonsInfo.buttonsAlighment {
         case .vertical:
-            stackView.axis = .vertical
+            buttonsStackView.axis = .vertical
         case .horizontal:
-            stackView.axis = .horizontal
+            buttonsStackView.axis = .horizontal
         }
-        stackView.distribution = .fillEqually
-        stackView.alignment = .fill
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        stackView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        stackView.isLayoutMarginsRelativeArrangement = true
-        
-        addSubview(stackView)
+        buttonsStackView.distribution = .fillEqually
+        buttonsStackView.alignment = .fill
+        buttonsStackView.translatesAutoresizingMaskIntoConstraints = false
+        buttonsStackView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        buttonsStackView.isLayoutMarginsRelativeArrangement = true
+        addSubview(buttonsStackView)
         NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 195),
+            buttonsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            buttonsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            buttonsStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 195),
+            
         ])
 
         info.buttonsInfo.buttons.forEach {
-        
             let info = WAlertOptionButtonInfo(title: $0.title, cornersToRound: $0.cornersToRound)
             let button = WAlertOptionButton(info: info)
-            
             button.clipsToBounds = true
             button.layer.cornerRadius = 10
-            
             button.layer.maskedCorners = info.cornersToRound.toCACornerMask()
-           
-            stackView.addArrangedSubview(button)
-            
-                   button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+            buttonsStackView.addArrangedSubview(button)
+            button.heightAnchor.constraint(equalToConstant: 50).isActive = true
 }
         
-        let stackViewContent = UIStackView()
+        let alertStackView = UIStackView()
         
-        stackViewContent.axis = .vertical
-        
-        
-        stackViewContent.distribution = .fillEqually
-        stackViewContent.alignment = .fill
-        stackViewContent.translatesAutoresizingMaskIntoConstraints = false
-        
-        stackViewContent.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        stackViewContent.isLayoutMarginsRelativeArrangement = true
-        
-        addSubview(stackViewContent)
+        addSubview(alertStackView)
+        alertStackView.translatesAutoresizingMaskIntoConstraints = false
+        alertStackView.axis = .vertical
+        alertStackView.distribution = .fillEqually
+        alertStackView.alignment = .fill
+        alertStackView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        alertStackView.isLayoutMarginsRelativeArrangement = true
+        alertStackView.backgroundColor = .brown
+ 
         NSLayoutConstraint.activate([
-            stackViewContent.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            stackViewContent.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            stackViewContent.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            stackViewContent.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100),
-
-        ])
+            alertStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            alertStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            alertStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            alertStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            ])
         
-        info.content.forEach({
-            
-            switch $0 {
-            case .title(let text):
-                let view = WAlertContentTitleView(text: "aaa")
-            case .subtitle(let text):
-                let subTitle = WAlertContentSubtitleView(text: "sss")
-            case .image(let image):
-                let image = WAlertImageContent(image: image)
-                
-                let title = WAlertContentTitleView(text: "asasd")
-                
-                title.layer.cornerRadius = 10
-                stackViewContent.addArrangedSubview(title)
+        alertStackView.addArrangedSubview(contentStackView)
+        alertStackView.addArrangedSubview(buttonsStackView)
+        
+            }
     
-            }
-            //вот дальше чуть подзабыл что надо сделать
-            //получается надо добавить теперь в стек вью верно?
-        
-            })
-      
-                
-            }
+    
+    
     }
 
 

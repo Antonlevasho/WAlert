@@ -14,7 +14,6 @@ final class WAlertContentTitleView: UIView {
         super.init(frame: .zero)
         self.titleLabels.text = text
         initialize()
-
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -22,13 +21,13 @@ final class WAlertContentTitleView: UIView {
     
     private lazy var titleLabels: UILabel = {
                 let label = UILabel()
-                label.text = "hello"
-                label.textColor = .white
+                label.text = ""
+                label.textColor = .black
                 label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .yellow
                 return label
             }()
 }
-
 extension WAlertContentTitleView {
 
     func initialize() {
@@ -38,6 +37,5 @@ extension WAlertContentTitleView {
             titleLabels.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor).isActive = true
             titleLabels.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
             titleLabels.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-
         }
 }

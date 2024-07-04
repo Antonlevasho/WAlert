@@ -22,5 +22,6 @@ enum WButtonsAlighment {
 }
 
 struct WAlertContent {
-    
+    let buttomStackView: UIStackView
+    let contentStackView: UIStackView
 }

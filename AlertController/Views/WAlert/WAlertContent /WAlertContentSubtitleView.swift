@@ -14,15 +14,14 @@ class WAlertContentSubtitleView: UIView {
             self.subTitleLabel.text = text
             initializes()
         }
-        
         required init?(coder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
-        
         private lazy var subTitleLabel: UILabel = {
                     let label = UILabel()
                     label.text = "hello"
                     label.textColor = .white
+            label.backgroundColor = .red
                     label.translatesAutoresizingMaskIntoConstraints = false
                     return label
                 }()
