@@ -81,19 +81,26 @@ private extension WAlert {
         ])
         
         info.content.forEach({
+            
             switch $0 {
             case .title(let text):
-                let view = WAlertContentTitleView(text: "sasd")
+                let view = WAlertContentTitleView(text: "aaa")
             case .subtitle(let text):
-                let subTitle = WAlertContentSubtitleView(text: "Sadsad")
+                let subTitle = WAlertContentSubtitleView(text: "sss")
             case .image(let image):
                 let image = WAlertImageContent(image: image)
+                
+                let title = WAlertContentTitleView(text: "asasd")
+                
+                title.layer.cornerRadius = 10
+                stackViewContent.addArrangedSubview(title)
     
             }
             //вот дальше чуть подзабыл что надо сделать
-            //получается надо добавить теперь в стек вью верно? 
+            //получается надо добавить теперь в стек вью верно?
         
             })
+      
                 
             }
     }
