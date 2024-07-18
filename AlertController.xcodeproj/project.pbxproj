@@ -20,7 +20,9 @@
 		5D7073992BFB677600BB6DDF /* WAlertInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7073982BFB677600BB6DDF /* WAlertInfo.swift */; };
 		5D70739C2BFCA24F00BB6DDF /* WAlertOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70739B2BFCA24F00BB6DDF /* WAlertOptionButton.swift */; };
 		5D7073A22BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7073A12BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift */; };
-		5D79E30F2C2AAC8300630614 /* WalertOptionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D79E30E2C2AAC8300630614 /* WalertOptionContent.swift */; };
+		5D79E30F2C2AAC8300630614 /* WalertContentTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D79E30E2C2AAC8300630614 /* WalertContentTitleView.swift */; };
+		5D79E3112C2AF95200630614 /* WAlertContentSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D79E3102C2AF95200630614 /* WAlertContentSubtitleView.swift */; };
+		5D79E3142C2C176500630614 /* WAlertImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D79E3132C2C176500630614 /* WAlertImageContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +60,9 @@
 		5D7073982BFB677600BB6DDF /* WAlertInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAlertInfo.swift; sourceTree = "<group>"; };
 		5D70739B2BFCA24F00BB6DDF /* WAlertOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAlertOptionButton.swift; sourceTree = "<group>"; };
 		5D7073A12BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAlertOptionButtonInfo.swift; sourceTree = "<group>"; };
-		5D79E30E2C2AAC8300630614 /* WalertOptionContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalertOptionContent.swift; sourceTree = "<group>"; };
+		5D79E30E2C2AAC8300630614 /* WalertContentTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalertContentTitleView.swift; sourceTree = "<group>"; };
+		5D79E3102C2AF95200630614 /* WAlertContentSubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAlertContentSubtitleView.swift; sourceTree = "<group>"; };
+		5D79E3132C2C176500630614 /* WAlertImageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAlertImageContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +121,8 @@
 		2336369C2C11D688001ECB11 /* WAlert */ = {
 			isa = PBXGroup;
 			children = (
-				5D7073982BFB677600BB6DDF /* WAlertInfo.swift */,
-				5D7073A12BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift */,
-				5D70739B2BFCA24F00BB6DDF /* WAlertOptionButton.swift */,
-				5D79E30E2C2AAC8300630614 /* WalertOptionContent.swift */,
-				2336369A2C11D52A001ECB11 /* WAlert.swift */,
+				5D79E3152C2C183600630614 /* WA Button + Alert+ info */,
+				5D79E3122C2AF96900630614 /* WAlertContent  */,
 			);
 			path = WAlert;
 			sourceTree = "<group>";
@@ -172,6 +173,27 @@
 				5D3D15252BEEB03C00DC5E90 /* AlertControllerUITestsLaunchTests.swift */,
 			);
 			path = AlertControllerUITests;
+			sourceTree = "<group>";
+		};
+		5D79E3122C2AF96900630614 /* WAlertContent  */ = {
+			isa = PBXGroup;
+			children = (
+				5D79E30E2C2AAC8300630614 /* WalertContentTitleView.swift */,
+				5D79E3102C2AF95200630614 /* WAlertContentSubtitleView.swift */,
+				5D79E3132C2C176500630614 /* WAlertImageContent.swift */,
+			);
+			path = "WAlertContent ";
+			sourceTree = "<group>";
+		};
+		5D79E3152C2C183600630614 /* WA Button + Alert+ info */ = {
+			isa = PBXGroup;
+			children = (
+				5D7073982BFB677600BB6DDF /* WAlertInfo.swift */,
+				5D7073A12BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift */,
+				5D70739B2BFCA24F00BB6DDF /* WAlertOptionButton.swift */,
+				2336369A2C11D52A001ECB11 /* WAlert.swift */,
+			);
+			path = "WA Button + Alert+ info";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,9 +330,11 @@
 				5D7073992BFB677600BB6DDF /* WAlertInfo.swift in Sources */,
 				2336369B2C11D52A001ECB11 /* WAlert.swift in Sources */,
 				5D3D150A2BEEB03900DC5E90 /* AlertController.xcdatamodeld in Sources */,
-				5D79E30F2C2AAC8300630614 /* WalertOptionContent.swift in Sources */,
+				5D79E3142C2C176500630614 /* WAlertImageContent.swift in Sources */,
+				5D79E30F2C2AAC8300630614 /* WalertContentTitleView.swift in Sources */,
 				5D3D15042BEEB03900DC5E90 /* WViewController.swift in Sources */,
 				5D7073A22BFCD64C00BB6DDF /* WAlertOptionButtonInfo.swift in Sources */,
+				5D79E3112C2AF95200630614 /* WAlertContentSubtitleView.swift in Sources */,
 				5D3D15002BEEB03900DC5E90 /* AppDelegate.swift in Sources */,
 				5D3D15022BEEB03900DC5E90 /* SceneDelegate.swift in Sources */,
 			);

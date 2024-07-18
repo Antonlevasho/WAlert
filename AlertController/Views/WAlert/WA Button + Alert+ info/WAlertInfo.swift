@@ -1,11 +1,11 @@
 import UIKit
 
 struct WAlertInfo {
-    let content: WalertContentItemType
+    let content: [WAlertContentItemType]
     let buttonsInfo: WButtonsInfo
 }
 
-enum WalertContentItemType {
+enum WAlertContentItemType {
     case title(text: String)
     case subtitle(text: String)
     case image(image: UIImage)
@@ -22,5 +22,6 @@ enum WButtonsAlighment {
 }
 
 struct WAlertContent {
-    
+    let buttomStackView: UIStackView
+    let contentStackView: UIStackView
 }
